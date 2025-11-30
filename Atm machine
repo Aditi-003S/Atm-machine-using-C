@@ -1,0 +1,58 @@
+// ATM Machine......
+#include <stdio.h>
+int main(){
+  char card,cash=4,collected;
+  int n, p,a,b, diff, i;
+  char cad;
+  printf("Welcome to the Atm machine\n");
+  printf("------------------------------\n");
+  printf("Please Insert you card\n\n");
+  scanf("%c",&card);
+
+  if(card=='k'){
+      printf("hello!\n\n");
+      printf("press 1 to withdrawal the money from your account\n\n");
+      printf("press 2 to check the balance\n\n");
+      
+      b=5000;
+      printf("Enter your Choice:");
+      scanf("%d",&n);
+      
+      if(n==1){
+          while(cash==0){
+          printf("please enter your 4 digit pin:\n");
+          scanf("%d",&p);
+          if(p==1234){
+              printf("Enter the amount to be withdraw:\n");
+              scanf("%d",&a);
+              
+              if(a>b){
+                  printf("Insufficient amount\n");
+                  
+              }
+              else {
+                  printf("Collect your Money\n");
+                  diff = b-a;
+                  printf("Now, your bank balance ids %d\n",diff);
+                  
+              }
+              
+          
+            }
+            else {
+                printf("Incorrect pin\n\n");
+                printf("please Try Again:\n\n");
+                scanf("%d",&p);
+                
+                }
+                cash=cash-1;
+                printf("your request is blocked please collect your card and Try Again\n\n");
+            }   
+               
+          
+          
+          }
+      }
+   return 0;   
+
+}
